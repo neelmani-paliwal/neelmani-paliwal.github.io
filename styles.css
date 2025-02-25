@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+nav {
+    background: #35424a; /* Dark background */
+    color: #ffffff;
+    padding: 2px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Make nav sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays on top */
+    /* height: 50px; */
+}
+
+nav h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the links */
+}
+
+nav ul li {
+    margin: 0 15px;
+    transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Positioning for pseudo-element */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px; /* Height of the underline */
+    background: #e8491d; /* Underline color */
+    width: 0;
+    transition: width 0.3s; /* Smooth transition for underline */
+    position: absolute;
+    bottom: -5px; /* Position it below the link */
+    left: 50%; /* Center it */
+    transform: translateX(-50%); /* Center alignment */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+nav ul li:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 140px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns images to the left */
+    gap: 10px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+}
+
+.responsive-img {
+    width: 180px; /* Default size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between projects */
+}
+
+.project-1 {
+    background-color: #e7d6d6; /* Light color for Project 1 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-2 {
+    background-color: #e9f7f2; /* Light color for Project 2 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-3 {
+    background-color: #fef6d6; /* Light color for Project 3 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-4 {
+    background-color: #e0f7fa; /* Light color for Project 4 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-5 {
+    background-color: #ede6ec; /* Light color for Project 5 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-6 {
+    background-color: #f1f8e9; /* Light color for Project 6 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .image-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .responsive-img {
+        width: 240px; /* Smaller size for mobile devices */
+    }
+}
+
+h3 {
+    color: #35424a;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #35424a;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
