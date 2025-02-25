@@ -104,6 +104,10 @@ section {
     width: 180px; /* Default size for larger screens */
     height: auto; /* Maintain aspect ratio */
 }
+.resp-img {
+    max-width: 100%;
+    height: auto;
+}
 
 .project {
     padding: 15px;
